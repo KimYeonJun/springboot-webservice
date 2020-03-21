@@ -1,5 +1,6 @@
 package com.webservice.springboot.domain.posts;
 
+import com.webservice.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Entity //테이블과 링크될 클래스임을 나타낸다.
         //기본값으로 클래스의 카멜케이스 이름을 언더스코어 네이밍(_)으로 테이블 이름을 매칭한다.
         //ex) SalesManager.java -> sales_manager table
-public class Posts {
+public class Posts extends BaseTimeEntity {
     //Posts클래스를 Entity클래스라고 의미한다. DB의 테이블과 매칭된다.
     //Entity 클래스에서는 절대 Setter메소드를 만들지 않는다.
     @Id //해당 테이블의 PK 필드를 의미
