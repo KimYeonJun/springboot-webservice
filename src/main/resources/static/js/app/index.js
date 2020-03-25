@@ -54,7 +54,7 @@ var main = {
         });
     },
     delete : function(){
-        var id = $('id').val();
+        var id = $('#id').val();
 
         $.ajax({
             type: 'DELETE',
@@ -65,7 +65,7 @@ var main = {
             alert('글이 삭제되었습니다.');
             window.location.href = '/';
         }).fail(function(error){
-            alert(JOSN.stringify(error));
+            alert(JSON.stringify(error));
         });
     }
 };
